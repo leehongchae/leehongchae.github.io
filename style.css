@@ -1,0 +1,106 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    background: linear-gradient(217deg, rgb(222, 207, 222), rgba(255, 255, 255, 0) 70.71%),
+    linear-gradient(127deg, rgb(199, 221, 214), rgba(255, 255, 255, 0) 70.71%),
+    linear-gradient(336deg, rgba(148, 148, 188, 0.8), rgba(255, 255, 255, 0) 70.71%);
+}
+
+.main-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    word-break: keep-all;
+    text-shadow: #FAFAFA 3px 3px;
+    text-align: center;
+}
+
+.title {
+    word-break: keep-all;
+    text-shadow: #FAFAFA 2px 2px;
+}
+
+.section {
+    padding: 4rem 1.5rem;
+}
+
+.top-margin {
+    margin-top: 2em;
+}
+
+.card {
+    font-size: 1.2em;
+    border-radius: 0.5em;
+}
+
+.card.selectable {
+    cursor: pointer;
+}
+
+.card.selectable .card-content:after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url(img/right-arrow.png) no-repeat;
+    background-size: cover;
+    float: right;
+    margin-top: 0.3em;
+    opacity: 0.3;
+}
+
+.card.selectable:hover, .card.selectable:active {
+    background-color: #f3eeff;
+}
+
+.navi {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.75em;
+    background: rgb(243 242 243);
+    font-size: 1.1em;
+    font-weight: 600;
+    z-index: 100;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.navi .left-arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.navi .right {
+    float: right;
+}
+
+.panel-heading {
+    background-color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.panel-block {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+img.animal {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 15px 15px 15px 5px;
+}
+
+.tags span {
+    display: inline-block;
+    margin: 5px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: #ada8ce;
+    float: right;
+    font-size: 0.8em;
+    color: #FAFAFA;
+}
