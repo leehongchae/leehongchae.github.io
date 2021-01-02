@@ -90,8 +90,8 @@ body {
 img.animal {
     width: 64px;
     height: 64px;
-    float: left;
-    margin: 15px 15px 15px 5px;
+    margin: auto;
+    display: block;
 }
 
 .tags span {
