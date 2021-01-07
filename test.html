@@ -22,34 +22,33 @@
                         </div>
                     </div>
                     <div class="columns">
-                        <div class="column is-full">
-                            <label for="cardExp">Expiration Date</label>
-                            <input type="text" class="input is-primary" id="cardExp" name="cardExp"
-                                   autocomplete="cc-exp" x-autocompletetype="cc-exp">
-                        </div>
-                    </div>
-                    
-                    <div class="columns">
-                        <div class="column is-full">
-                            <input type="text" class="input is-info" id="creditCardMonth" name="creditCardMonth"
+                        <div class="column is-half">
+                            <label for="creditCardMonth">Exp Month</label>
+                            <input type="text" class="input is-primary" id="creditCardMonth" name="creditCardMonth"
                                    autocomplete="cc-exp-month" x-autocompletetype="cc-exp-month">
-
-                            <input type="text" class="input is-info" id="creditCardYear" name="creditCardYear"
+                        </div>
+                        <div class="column is-half">
+                            <label for="creditCardYear">Exp Year</label>
+                            <input type="text" class="input is-primary" id="creditCardYear" name="creditCardYear"
                                    autocomplete="cc-exp-year" x-autocompletetype="cc-exp-year">
                         </div>
                     </div>
                 </form>
-                <div class="columns">
+                <div class="columns" style="margin-top:100px">
                     <div class="column is-one-quarter">
+                        <label for="num1">Num1</label>
                         <input type="text" class="input is-info" id="num1" inputmode="numeric"/>
                     </div>
                     <div class="column is-one-quarter">
+                        <label for="num2">Num2</label>
                         <input type="text" class="input is-info" id="num2" inputmode="numeric"/>
                     </div>
                     <div class="column is-one-quarter">
+                        <label for="num3">Num3</label>
                         <input type="text" class="input is-info" id="num3" inputmode="numeric"/>
                     </div>
                     <div class="column is-one-quarter">
+                        <label for="num4">Num4</label>
                         <input type="text" class="input is-info" id="num4" inputmode="numeric"/>
                     </div>
                 </div>
@@ -57,5 +56,17 @@
         </div>
     </div>
 </section>
+<script>
+    document.getElementById('cardNumber').addEventListener('input', (e) => {
+        const cardNumber = e.target.value
+
+        if (cardNumber.length === 16) {
+            document.getElementById('num1').value = cardNumber.substring(0, 4)
+            document.getElementById('num2').value = cardNumber.substring(4, 8)
+            document.getElementById('num3').value = cardNumber.substring(8, 12)
+            document.getElementById('num4').value = cardNumber.substring(12, 16)
+        }
+    });
+</script>
 </body>
 </html>
